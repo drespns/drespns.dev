@@ -22,18 +22,77 @@
 
   npm run dev
 -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beginner Tailwind Site</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .clip-star {
+        /* clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); */
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 79% 60%, 85% 100%, 50% 70%, 16% 100%, 24% 60%, 2% 35%, 39% 35%);
+      }
+    </style>
   </head>
   <body>
-    <!-- <div id="app"></div> -->
-    <h1 class="text-2xl text-red-300">Hi there</h1>
-    <!-- <script type="module" src="/main.js"></script> -->
+    <!-- ------------------ header/navigation --------------------------- -->
+    <!-- <h1 class="text-red-600 italic hover:text-red-400">Hola</h1> -->
+    <div class="relative text-gray-700 font-mono border border-b-4 border-purple-400 bg-gradient-to-b from-purple-100 to-white">
+      <!-- <img src="https://bloodyelbow.com/wp-content/uploads/1/2024/07/GettyImages-1435626922-1140x801.jpg" alt="Teaser image" class="absolute size-44 clip-star top-48 left-1/2 -translate-x-1/2 -translate-y-1/2 outline-2 outline-purple-500 rounded-full mx-auto"> -->
+       <div class="absolute size-48 clip-star top-32 left-1/2 -translate-x-1/2 -translate-y-1/2 outline-2 outline-purple-500 mx-auto bg-[url('https://bloodyelbow.com/wp-content/uploads/1/2024/07/GettyImages-1435626922-1140x801.jpg')] hover:bg-[url('https://media.vandalsports.com/i/1200x1200/5-2024/202459164425_1.jpg')] bg-no-repeat bg-contain bg-center"></div>
+      <div class="container mx-auto flex justify-between p-6 lg:px-0">
+        <!-- left header section -->
+        <div class="flex items-center space-x-4">
+          <a
+            href="#"
+            class="font-bold text-2xl italic text-teal-800 tracking-wider"
+            >Beginner Tailwind</a
+          >
+          <a
+            href="#"
+            class="hidden lg:inline-block hover:underline hover:underline-offset-2 hover:text-gray-800/90"
+            >About</a
+          >
+          <a
+            href="#"
+            class="hidden lg:inline-block hover:underline hover:underline-offset-2 hover:text-gray-800/90"
+            >What you'll learn</a
+          >
+          <a
+            href="#"
+            class="hidden lg:inline-block hover:underline hover:underline-offset-2 hover:text-gray-800/90"
+            >Pricing</a
+          >
+          <a
+            href="#"
+            class="hidden lg:inline-block hover:underline hover:underline-offset-2 hover:text-gray-800/90"
+            >FAQ</a
+          >
+        </div>
+
+        <!-- right header section -->
+        <div class="flex items-center space-x-2">
+          <a
+            href="#"
+            class="hover:underline hover:underline-offset-2 hover:text-gray-800/90"
+            >Login</a
+          >
+          <a
+            href="#"
+            class="hidden lg:inline-block p-3 bg-purple-400 text-purple-700 rounded-xl shadow-sm hover:shadow-xl hover:outline hover:outline-2 hover:outline-violet-800 transition-all ease-in-out scale-105 duration-150 animate-bounce hover:animate-none hover:contrast-125 hover:saturate-150"
+            >Get the Course</a
+          >
+          <!-- clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Three.js Canvas -->
+    <canvas id="three-canvas"></canvas>
+
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
